@@ -1,0 +1,6 @@
+# Project exclude paths
+/mybatis-demo-15/target/
+/mybatis-framework-15/target/
+/spring-custom/target/
+/spring-demo/target/
+/springmvc-custom15/target/
