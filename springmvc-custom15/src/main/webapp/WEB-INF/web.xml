@@ -22,6 +22,11 @@
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>com.kkb.springmvc.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <!-- 配置springmvc的配置文件路径 -->
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springmvc.xml</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>

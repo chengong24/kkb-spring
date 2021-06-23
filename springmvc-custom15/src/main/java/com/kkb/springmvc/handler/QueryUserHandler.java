@@ -14,6 +14,6 @@ public class QueryUserHandler implements HttpRequestHandler {
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         response.setContentType("text/plain;charset=utf8");
-        response.getWriter().write("id111 : "+ id +"--name111 : "+name);
+        response.getWriter().write("id123 : "+ id +"--name123 : "+name);
     }
 }

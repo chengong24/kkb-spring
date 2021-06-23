@@ -5,10 +5,10 @@ import com.kkb.spring.framework.config.RuntimeBeanReference;
 import com.kkb.spring.framework.config.TypedStringValue;
 import com.kkb.spring.framework.factory.BeanFactory;
 
-public class ValueResolver {
+public class BeanDefinitionValueResolver {
     private BeanFactory beanFactory;
 
-    public ValueResolver(BeanFactory beanFactory) {
+    public BeanDefinitionValueResolver(BeanFactory beanFactory) {
         this.beanFactory = beanFactory;
     }
 

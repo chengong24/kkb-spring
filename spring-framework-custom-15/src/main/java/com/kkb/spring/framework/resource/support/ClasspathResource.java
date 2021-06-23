@@ -16,6 +16,12 @@ public class ClasspathResource implements Resource {
 
     @Override
     public InputStream getResource() {
+        if (resource.startsWith("classpath:")){
+            resource = resource.substring(10);
+        }
+        if (resource.startsWith("classpath*:")){
+            resource = resource.substring(11);
+        }
         return this.getClass().getClassLoader().getResourceAsStream(resource);
     }
 }

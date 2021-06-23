@@ -10,7 +10,6 @@ import java.io.IOException;
  * 解决的问题：一个Servlet只能处理一个请求的问题
  */
 public class BaseServlet extends HttpServlet {
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // http://localhost/userServlet?method=query
         String method = request.getParameter("method");
@@ -18,7 +17,6 @@ public class BaseServlet extends HttpServlet {
 
     }
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
     }

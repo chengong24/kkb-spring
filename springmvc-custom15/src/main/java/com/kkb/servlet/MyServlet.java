@@ -7,13 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class MyServlet extends HttpServlet {
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain;charset=utf8");
         response.getWriter().write("老詹真帅");
     }
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
     }

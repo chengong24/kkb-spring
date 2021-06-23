@@ -1,2 +1,17 @@
 <beans>
+    <!-- 配置处理器适配器和处理器映射器 -->
+    <bean class="com.kkb.springmvc.mapping.BeanNameUrlHandlerMapping"></bean>
+    <bean class="com.kkb.springmvc.mapping.SimpleUrlHandlerMapping"></bean>
+    <bean class="com.kkb.springmvc.adapter.HttpRequestHandlerAdapter"></bean>
+    <bean class="com.kkb.springmvc.adapter.SimpleControllerHandlerAdapter"></bean>
+
+    <!-- 配置注解方式的处理器适配器和处理器映射器 -->
+    <bean class="com.kkb.springmvc.mapping.RequestMappingHandlerMapping" ></bean>
+    <bean class="com.kkb.springmvc.adapter.RequestMappingHandlerAdapter" ></bean>
+
+    <!-- 配置处理器 -->
+    <bean name="/queryUser" class="com.kkb.springmvc.handler.QueryUserHandler"></bean>
+
+    <!-- 配置注解方式的处理器 -->
+    <bean class="com.kkb.springmvc.handler.UserController"></bean>
 </beans>

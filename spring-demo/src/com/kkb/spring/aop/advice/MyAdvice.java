@@ -44,6 +44,7 @@ public class MyAdvice {
 		System.out.println("环绕通知---前置通知");
 		try {
 			// 调用目标对象的方法
+
 			joinPoint.proceed();
 			System.out.println("环绕通知---后置通知");
 		} catch (Throwable e) { // 相当于实现异常通知

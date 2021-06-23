@@ -1,23 +1,18 @@
 package com.kkb.springmvc.servlet;
 
-import com.kkb.springmvc.adapter.HttpRequestHandlerAdapter;
-import com.kkb.springmvc.adapter.SimpleControllerHandlerAdapter;
+import com.kkb.spring.framework.factory.support.DefaultListableBeanFactory;
+import com.kkb.spring.framework.reader.XmlBeanDefinitionReader;
+import com.kkb.spring.framework.resource.Resource;
+import com.kkb.spring.framework.resource.support.ClasspathResource;
 import com.kkb.springmvc.adapter.iface.HandlerAdapter;
-import com.kkb.springmvc.handler.QueryUserHandler;
-import com.kkb.springmvc.handler.SaveUserHandler;
-import com.kkb.springmvc.handler.iface.HttpRequestHandler;
-import com.kkb.springmvc.handler.iface.SimpleControllerHandler;
-import com.kkb.springmvc.mapping.BeanNameUrlHandlerMapping;
-import com.kkb.springmvc.mapping.SimpleUrlHandlerMapping;
 import com.kkb.springmvc.mapping.iface.HandlerMapping;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.InputStream;
 import java.util.List;
 
 
@@ -26,20 +21,49 @@ import java.util.List;
  */
 public class DispatcherServlet extends AbstractServlet {
 
-    private List<HandlerAdapter> handlerAdapters = new ArrayList<>();
-    private List<HandlerMapping> handlerMappings = new ArrayList<>();
+    private List<HandlerAdapter> handlerAdapters ;
+    private List<HandlerMapping> handlerMappings ;
+
+    private DefaultListableBeanFactory beanFactory;
+
+    public static final String CONTEXT_CONFIG_LOCATION = "contextConfigLocation";
 
     /**
      * Servlet生命周期中的初始化方法
-     * @param config
+     * @param config web.xml中servlet的配置信息
      * @throws ServletException
      */
     @Override
     public void init(ServletConfig config) throws ServletException {
-        handlerAdapters.add(new HttpRequestHandlerAdapter());
+
+        String location = config.getInitParameter(CONTEXT_CONFIG_LOCATION);
+        initSpringContainer(location);
+        // 对于spring容器的单例bean一次性初始化
+        initSingletonBeans();
+        initStrategies();
+    }
+
+    private void initSingletonBeans() {
+        beanFactory.getBeansByType(Object.class);
+    }
+
+    private void initStrategies() {
+        handlerMappings = beanFactory.getBeansByType(HandlerMapping.class);
+        handlerAdapters = beanFactory.getBeansByType(HandlerAdapter.class);
+        /* handlerAdapters.add(new HttpRequestHandlerAdapter());
         handlerAdapters.add(new SimpleControllerHandlerAdapter());
         handlerMappings.add(new BeanNameUrlHandlerMapping());
-        handlerMappings.add(new SimpleUrlHandlerMapping());
+        handlerMappings.add(new SimpleUrlHandlerMapping());*/
+    }
+
+    private void initSpringContainer(String location) {
+        beanFactory = new DefaultListableBeanFactory();
+
+        Resource resource = new ClasspathResource(location);
+        InputStream inputStream = resource.getResource();
+
+        XmlBeanDefinitionReader definitionReader = new XmlBeanDefinitionReader(beanFactory);
+        definitionReader.registerBeanDefinitions(inputStream);
     }
 
     @Override
