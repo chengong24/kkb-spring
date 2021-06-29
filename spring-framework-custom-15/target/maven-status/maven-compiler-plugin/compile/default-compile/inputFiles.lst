@@ -1,1 +1,25 @@
-D:\05-workspace\vip-class\spring-framework-custom-15\src\main\java\com\kkb\spring\framework\factory\BeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/resource/Resource.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/AutowireCapableBeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/resolver/BeanDefinitionValueResolver.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/reader/XmlBeanDefinitionReader.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/aware/BeanFactoryAware.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/utils/ReflectUtils.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/registry/BeanDefinitionRegistry.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/resource/support/ClasspathResource.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/init/InitializingBean.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/resource/support/UrlResource.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/ListableBeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/registry/SingletonBeanRegistry.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/registry/support/DefaultSingletonBeanRegistry.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/support/AbstractBeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/reader/XmlBeanDefinitionDocumentReader.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/aware/Aware.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/config/PropertyValue.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/config/TypedStringValue.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/config/BeanDefinition.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/utils/SimpleTypeRegistry.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/BeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/support/AbstractAutowireCapableBeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/factory/support/DefaultListableBeanFactory.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/config/RuntimeBeanReference.java
+/Users/chengong/Desktop/data/study/开课吧/资料/2 spring/code/spring-framework-custom-15/src/main/java/com/kkb/spring/framework/utils/DocumentUtils.java
